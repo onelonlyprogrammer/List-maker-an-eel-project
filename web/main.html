@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="text/javascript" src="scripts/test.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p id="output">test</p>
+    <input type="text" placeholder="Search, add, or delete item" id="input_box">
+
+    <button onclick="output_text('retrive', document.getElementById('input_box').value)">retrive</button>
+    <button onclick="output_text('add_item')">add_item</button>
+    <button onclick="output_text('delete', document.getElementById('input_box').value)">delete</button>
+    
+</body>
+</html>
