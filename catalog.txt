@@ -1,0 +1,36 @@
+365 popcorn, 4, 5.98
+almond milk, 3, 2.99
+apple, 2, 5.99
+baking cocoa, 3, 8.29
+beans, 6, 2.25
+bread, 1, 3.19
+broccoli, 3, 1.99
+butter, 1, 4.49
+chicken nuggets, 2, 10.99
+collard greens, 2, 1.99
+eggs, 2, 3.19
+forks, 1, 12.99
+fried chicken, 0, 7.99
+fries, 1, 2.99
+grape juice, 1, 3.69
+ground turky, 1, 5.99
+hotdogs, 2, 5.99
+kechup, 2, 2.69
+kettle chips, 1, 3.49
+latex gloves, 1, 21.99
+lettuce, 1, 2.99
+maple syrup, 2, 7.99
+milk, 2, 3.59
+o r popcorn, 2, 4.29
+paper towels, 2, 15.99
+parchment, 1, 6.49
+peanut butter, 2, 5.99
+prune juice, 1, 5.99
+spoons, 1, 12.99
+strawberries, 1, 4.99
+toilet paper, 1, 20.99
+tomato sauce, 2, 2.99
+vanilla extract, 1, 11.99
+yogurt, 5, 1.19
+lemon, 5, 0.69
+hello, 4, 5.15
