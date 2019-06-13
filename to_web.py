@@ -32,7 +32,9 @@ def get_item(func_request, item_request):
         return item
     
     elif func_request == 1:
-        A_List = cat.addToList(A_List, item_request)
+        A_List, ret_String = cat.addToList(A_List, item_request)
+        if ret_String != None:
+            return ret_String
     
     elif func_request == 2:
         A_List = cat.delete(A_List, item_request)
@@ -40,5 +42,4 @@ def get_item(func_request, item_request):
     elif func_request == 3:
         return A_List
     
-
-eel.start("main.html")
+eel.start('main.html')
