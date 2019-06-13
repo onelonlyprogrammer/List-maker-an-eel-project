@@ -23,7 +23,7 @@ def addToList(A_List, newItem):
         newItem[2] = float(newItem[2])
     except ValueError:
         print ("Invalid input")
-        return "Invalid input"
+        return A_List, "Invalid input"
 
     A_List.append(newItem)
     with open("catalog.txt","w") as file_edit:
@@ -32,6 +32,7 @@ def addToList(A_List, newItem):
             file_edit.write(a[0] + ", " + str(a[1]) + ", " + str(a[2]) + "\n")
 
     A_List.sort()
+    return A_List, None
 
 #Takes user input and searches for item name in catalog
 #If item not found informs the user
