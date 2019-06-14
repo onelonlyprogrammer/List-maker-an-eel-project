@@ -13,7 +13,7 @@ def retrive(A_List, request):
             return look
     if request != look[0]:
         print("No Item named " + request)
-        return ["No Item named " + request, 0, 0]
+        return ["No Item named " + request]
 
 
 #Takes arguments for new item and saves them to file
@@ -24,6 +24,9 @@ def addToList(A_List, newItem):
     except ValueError:
         print ("Invalid input")
         return A_List, "Invalid input"
+    except IndexError:
+        print ("Error: input name, quantity, and price")
+        return A_List, "Error: input name, quantity, and price"
 
     A_List.append(newItem)
     with open("catalog.txt","w") as file_edit:
@@ -37,27 +40,33 @@ def addToList(A_List, newItem):
 #If item not found informs the user
 #When item is found deletes from A_List
 def delete(A_List, request):
+    trash = [[], []]
     with open("catalog.txt", "w") as file_edit:
         for look in A_List:
             print("working")
             if request.upper() == look[0].upper():
+                trash.append(look)
                 A_List.remove(look)
                 print(look, "sucessfully deleted")
             elif request not in A_List:
                 file_edit.write(str(look[0]) + ", " + str(look[1]) + ", " + str(look[2]) + "\n")
-    return A_List
+    return A_List, trash
 
 #takes user input and searches for item
 #When item is found adds price argument to total
 def add(A_List, request):
-    Total = 0
-    if not request:
-        print(Total)
+    result = [0.00]
 
-    for look in A_List:
-        if request == look[0]:
-            Total += float(look[2]) 
-            break
+    for r in list(request):
+        for look in A_List:
+            if r == look[0]:
+                request.remove(r)
+                result[0] += float(look[2])
+                break
+            
+    if len(request) > 0 :
+        print("No item named ", request)
+        result.append("could not find " + str(request))
 
-    if request != look[0]:
-        print("No item named " + request)
+    return result
+
