@@ -26,8 +26,11 @@ eel.init("web")
 @eel.expose
 def get_item(func_request, item_request):
     global A_List
+    trash = []
     
     if func_request == 0:
+        if item_request == "all":
+            return A_List
         item = cat.retrive(A_List, item_request)
         return item
     
@@ -37,9 +40,11 @@ def get_item(func_request, item_request):
             return ret_String
     
     elif func_request == 2:
-        A_List = cat.delete(A_List, item_request)
+        A_List, trash = cat.delete(A_List, item_request)
+        return trash
 
     elif func_request == 3:
-        return A_List
+        result = cat.add(A_List, item_request)
+        return result
     
 eel.start('main.html')
