@@ -40,7 +40,7 @@ function output_text(func_arg, item_arg) {
         var new_item = item_arg.split(" ");
         eel.get_item(3, new_item)(function (ret){
             console.log(ret)
-            output.innerHTML = ret;
+            output.innerHTML = "$" + ret;
 
         });
     }
