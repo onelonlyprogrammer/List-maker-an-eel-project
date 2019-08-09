@@ -47,4 +47,4 @@ def get_item(func_request, item_request):
         result = cat.add(A_List, item_request)
         return result
     
-eel.start('main.html')
+eel.start('main.html', size = (1000, 600))
