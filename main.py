@@ -14,13 +14,8 @@ try:
 #Opens catalog.txt
 #If catalog.txt not found makes new file named catalog.txt
 except FileNotFoundError:
-    error_Input = input("file not found. make now one? ") 
-
-    if "y" in error_Input.upper():
-            file = open("catalog.txt", "w")
-            file.close()
-            print("new file created")
-
+    with open("catalog.txt", "w"):
+        pass
 eel.init("web")
 
 @eel.expose
